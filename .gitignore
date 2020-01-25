@@ -5,3 +5,9 @@
 *.pdf
 *.xml
 *.gz
+*.4ct
+*.4tc
+*.dvi
+*.tmp
+*.xref
+
