@@ -144,5 +144,4 @@
 \AtBeginDocument{%
   \pagestyle{empty}
   \color{body}
-  \raggedright
 }
