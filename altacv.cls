@@ -7,9 +7,6 @@
 \@ifl@t@r\fmtversion{2018/04/01}{\UseRawInputEncoding}{}
 \ProvidesClass{altacv}[2018/12/01 AltaCV v1.1.5, yet another alternative class for a résumé/curriculum vitae.]
 
-%% v1.1: Optionally load academicons
-\newif\if@academicons
-\DeclareOption{academicons}{\@academiconstrue}
 %% v1.1.3: Choice of round/square photo
 \newif\if@normalphoto
 \DeclareOption{normalphoto}{\@normalphototrue}
@@ -22,20 +19,7 @@
 
 \RequirePackage[margin=2cm]{geometry}
 \RequirePackage{fontawesome}
-\RequirePackage{ifxetex,ifluatex}
 \RequirePackage{scrlfile}
-
-%% v1.1.5: added for convenience
-\newif\ifxetexorluatex
-\ifxetex
-  \xetexorluatextrue
-\else
-  \ifluatex
-    \xetexorluatextrue
-  \else
-    \xetexorluatexfalse
-  \fi
-\fi
 
 \if@raggedtwoe
   \RequirePackage[newcommands]{ragged2e}
@@ -146,7 +130,6 @@
 \foreach \x in {1,...,5}{%
   \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}}\par%
 }
-
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
 
